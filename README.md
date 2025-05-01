@@ -78,3 +78,20 @@ A: For statefull applications like dbs use StatefullSet component and for statel
 ### kubectl
 - kubectl is interface to interact with a k8s cluster (through k8s master `api server` component / process)
 - kubectl is agnostic to on which service cluster is running, either minicube or in cloud
+
+### kubectl commands
+```
+$ kubectl get nodes - get status of nodes
+$ kubectl get pods - get status of pods
+$ kubectl get services - get status of services
+$ kubectl create ... - create any k8s component (pods are created through deployment component)
+$ kubectl get deployment - get status of deployments
+$ kubectl get replicaset - get status of replicaset (managing replicas of pod)
+$ kubectl edit deployment - edit particular deployment
+$ kubectl logs - see the logs
+$ kubectl apply -f - create the deployment with k8s config file
+
+
+example fo creating deployment
+$ kubectl create deployment nginx-deployment --image=nginx
+```
