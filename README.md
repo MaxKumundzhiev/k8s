@@ -14,8 +14,8 @@
 **node**
 - node is a component, which stands for a server (or a worker), where multiple pods components can run
 - there 2 types of node
-    - master
-    - slave
+    - master nodes
+    - woker nodes
 
 - there 4 processes which has to be installed on a `master` node
     - api server - cluster gateway to interact with cluster + keeps auth sstuff
