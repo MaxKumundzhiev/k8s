@@ -1,13 +1,14 @@
+## k8s
 - k8s is containes orchestration tool
 - features
     - high availability with no downtime
     - scalability
     - disaster recovery (backup and restore)
 
-## philosophy
+## k8s philosophy
 - k8s is replicating everything, where configurations are defined in deployment component
 
-## components
+## k8s components
 **pod**
 - pod is the samllest k8s component and its an abstraction on top of container - usually 1 application per pod
 
@@ -18,7 +19,7 @@
     - woker nodes
 
 - there 4 processes which has to be installed on a `master` node
-    - api server - cluster gateway to interact with cluster + keeps auth sstuff
+    - api server - cluster gateway to interact with cluster + keeps auth stuff --> `main and only one entrypoint to interact with k8s cluster`
     - scheduler - just decided on which worker node new pod should be scheduled - scheduler sends request to woker node kubelet
     - controller manager - detect state changes, e.g. of pods
     - etcd - key:value store of a cluster state (every change of a cluster is updated to store)
@@ -68,3 +69,12 @@ A: Each pod gets its own IP address and they communicate using it. When a pod di
 Q: Which k8s component to use for statefull and stateless applications?
 A: For statefull applications like dbs use StatefullSet component and for stateless ones use deployment component.
 ```
+
+
+## tools to work with k8s
+### minicube
+- minicube is 1 node k8s cluster, where master processes and worker processes both run on one node (machine), used for test purposes
+
+### kubectl
+- kubectl is interface to interact with a k8s cluster (through k8s master `api server` component / process)
+- kubectl is agnostic to on which service cluster is running, either minicube or in cloud
