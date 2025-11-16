@@ -57,6 +57,12 @@
 **StatefulSet**
 - StatefulSet component - stands for statefull applications, e.g. databases
 
+**Proxy**
+- The Kubernetes proxy is responsible for routing network traffic to load-balanced services in the Kubernetes cluster. To do its job, the proxy must be present on every node in the cluster. Kubernetes has an API object named DaemonSet, which you will learn about later in the book, that is used in many clusters to accomplish this. (using proxy we can launch kubernetes UI)
+
+**DNS**
+- DNS server, which provides naming and discovery for the services that are defined in the cluster.
+
 
 ## Q/A
 ```text
